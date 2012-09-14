@@ -1,0 +1,12 @@
+#!/bin/bash
+
+java -cp "./lib/*:./classes" Main &
+JAVA_PID=$!
+
+#This should result in an error if the process exited like it should have,
+#but it's still running because the gearman instance didn't shutdown and the
+#thread pool is still active, as shown by the jstack output.
+jstack $JAVA_PID
+
+#have to kill the process explicitly
+kill $JAVA_PID

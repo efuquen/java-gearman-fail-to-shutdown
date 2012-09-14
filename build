@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -f classes/*
+javac -d classes -cp "./lib/*" test.java
