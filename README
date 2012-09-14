@@ -2,7 +2,7 @@ A test case repo that shows how the java-gearman-service project fails to
 cleanup after itself when shutdown is called if you make both a worker and 
 client service.
 
-To run you need javac and java and a local gearmand running, 
+To run you need javac, java, jstack, and a local gearmand running, 
 then run the following scripts:
 
 ./build
