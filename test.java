@@ -32,4 +32,6 @@ class Main { public static void main(String[] args) {
   } finally {
     gearman.shutdown();
   }
+
+  System.out.println("I should exit after this.");
 }}
